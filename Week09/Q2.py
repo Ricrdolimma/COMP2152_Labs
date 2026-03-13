@@ -19,7 +19,6 @@ def simulate_task(name, duration, lock):
     lock.acquire()
     print(f"[DONE] {name} ({duration}s)")
     lock.release()
-
 # TODO: Complete run_threaded(tasks, lock)
 #   1. Create an empty list: threads = []
 #   2. For each (name, duration) in tasks:
@@ -36,6 +35,7 @@ def run_threaded(tasks, lock):
         t.start()
     for t in threads:
         t.join()
+
 
 
 # --- Provided below — error handling example from Week 06 ---
