@@ -54,6 +54,11 @@ class SimpleScanner:
     #   Otherwise, print each port: "  Port {port}"
     def display_results(self):
         print(f"    Resuelts for {self.target}:")
+        if not self.open_ports:
+            print("  No open port found.")
+        else:
+            for port in self.open_ports:
+                print(f"    Port {port}")
 
 
 # --- Main (provided) ---
